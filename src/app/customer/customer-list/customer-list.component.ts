@@ -16,18 +16,13 @@ import * as CustomersActions from '../store/customer.actions';
 export class CustomerListComponent implements OnInit{
 
   customersState$: Observable<{customers: Customer[]}>;
-
   displayedColumns: string[] = ['firstName', 'lastName', 'actions'];
-  dataSource = [];
 
   constructor(private store:Store<{customers}>, private dialog: MatDialog) {   
   }
 
   ngOnInit(): void {
     this.customersState$ = this.store.select(c=> c.customers);
-    this.customersState$.subscribe(c=> {
-    this.dataSource = c.customers;
-    });
   }
 
   openDialog(){

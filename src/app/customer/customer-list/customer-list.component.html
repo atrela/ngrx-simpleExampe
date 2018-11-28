@@ -3,7 +3,7 @@
 <div class="header-title">
 <h2>Available Customers</h2>
 </div>
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+<table mat-table [dataSource]="(customersState$ | async).customers" class="mat-elevation-z8">
 
       <ng-container matColumnDef="firstName">
         <th mat-header-cell *matHeaderCellDef>First Name</th>
