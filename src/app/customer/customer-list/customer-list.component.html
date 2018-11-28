@@ -1,0 +1,35 @@
+
+   
+<div class="header-title">
+<h2>Available Customers</h2>
+</div>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <ng-container matColumnDef="firstName">
+        <th mat-header-cell *matHeaderCellDef>First Name</th>
+        <td mat-cell *matCellDef="let customer"> {{customer.firstName}} </td>
+      </ng-container>
+    
+   
+      <ng-container matColumnDef="lastName">
+        <th mat-header-cell *matHeaderCellDef>Last Name</th>
+        <td mat-cell *matCellDef="let customer"> {{customer.lastName}} </td>
+      </ng-container>
+    
+     
+      <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef class="mat-btn-dialog-actions"> <button (click)="openDialog()" class="add-button" mat-button color="primary"><i class="fas fa-plus fa-2x"></i></button></th>
+          <td mat-cell *matCellDef="let customer"> 
+              <div class="mat-btn-dialog-actions">
+                  <button mat-button color="primary" (click)="editItem(customer.id)"><i class="fas fa-pen-square fa-2x"></i></button>
+                  <button mat-button color="accent" (click)="deleteItem(customer.id)"><i class="fas fa-minus-circle fa-2x"></i></button>
+                </div>
+          </td>
+        </ng-container>
+    
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+
+  

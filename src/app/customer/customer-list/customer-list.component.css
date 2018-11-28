@@ -1,0 +1,21 @@
+table {
+    width: 100%;
+  }
+
+  .add-button {
+color:green;
+  }
+
+  .mat-btn-dialog-actions {
+      text-align: right !important;
+  }
+
+ 
+  h2 {
+      padding:18px;
+  }
+
+  .header-title {
+      text-align: center;
+      width:100%;
+  }

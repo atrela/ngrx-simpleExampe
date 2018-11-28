@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.bg-image {
+    background-color: white;
+        text-align: center;
+    }
+
+    .mat-cell {
+        font-size: 20px;
+    }
+
+    .mat-header-cell {
+        font-size:20px;
+    }
+
+    .mat-dialog-container {
+        height: 40vh !important;
+    }

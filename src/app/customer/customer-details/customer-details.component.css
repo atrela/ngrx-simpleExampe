@@ -1,0 +1,40 @@
+.form-content {
+    display: flex;
+    flex-direction: column;
+    min-width: 15vw;
+    min-height: 23vh;
+    text-align:center;
+  }
+  
+  .form-content  > * {
+    width: 100%;
+  }
+
+  .row {
+      display: block;
+  }
+
+  .mat-form-field {
+      width:80%;
+  }
+
+  .btn-form-cancel {
+      color:orange;
+  }
+
+  .btn-form-save {
+      color:green;
+  }
+
+
+  h2 {
+    margin-left: 15px;
+  }
+
+  .mat-dialog-content {
+     height:100%;
+  }
+
+  .mat-dialog-container {
+    height: 50vh !important;
+}

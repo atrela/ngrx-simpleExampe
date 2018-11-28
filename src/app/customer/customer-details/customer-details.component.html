@@ -1,0 +1,37 @@
+
+<div mat-dialog-content >
+    <h2>Manage Customer</h2>
+    <br/>
+    <form #f="ngForm" (ngSubmit)="onSubmit()" class="form-content">
+        <div class="row">
+    <mat-form-field>
+        <input matInput 
+        name="firstName" 
+        placeholder="First Name"
+        [(ngModel)]="customer.firstName"
+        required/>
+    </mat-form-field>
+</div>
+<div class="row">
+    <mat-form-field>
+        <input matInput
+        name="lastName"
+        placeholder="Last Name"
+        [(ngModel)]="customer.lastName"
+        required/>
+    </mat-form-field>
+</div>
+<br/>
+<br/>
+  <div mat-dialog-actions>
+        <button mat-button class="btn-form-save"  type="submit"
+        [disabled]="!f.valid" cdkFocusInitial><i class="fas fa-save fa-2x"></i></button>
+    <button mat-button (click)="onCancelClick()" class="btn-form-cancel" ><i class="fas fa-ban fa-2x"></i></button>
+    
+  </div>
+</form>
+
+</div>
+
+
+   
